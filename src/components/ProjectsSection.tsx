@@ -1,9 +1,9 @@
 import { motion } from 'motion/react';
 import { useInView } from 'react-intersection-observer';
 import { ProjectCard } from './ProjectCard';
-import imgImage1 from 'figma:asset/417b38615138b7ded6d978f6786eb7c5158da4eb.png';
-import imgImage3 from 'figma:asset/64ca36b5e0d3e7dd75d8d630aa8f238b1024c6bb.png';
-import imgImage4 from 'figma:asset/1af2df29fb6761d26130cecc294ecbe96970bd25.png';
+import imgImage1 from '../assets/417b38615138b7ded6d978f6786eb7c5158da4eb.png';
+import imgImage3 from '../assets/64ca36b5e0d3e7dd75d8d630aa8f238b1024c6bb.png';
+import imgImage4 from '../assets/1af2df29fb6761d26130cecc294ecbe96970bd25.png';
 
 const projects = [
   {
@@ -17,7 +17,7 @@ const projects = [
     title: 'MATHEMIX',
     description:
       'Mathemix is a high-energy, gamified educational platform designed to make mathematics competitive and engaging. It combines fast-paced solo challenges with real-time multiplayer lobbies where players compete for the top spot on the leaderboard.',
-    tech: ['REACT', 'TAILWIND', 'NOSQL', 'FRAMER', 'FIREBASE'],
+    tech: ['REACT', 'TAILWIND', 'NOSQL', 'MOTION', 'FIREBASE'],
     image: imgImage3,
   },
   {
