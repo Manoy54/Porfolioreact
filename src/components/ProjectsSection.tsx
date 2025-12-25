@@ -1,9 +1,8 @@
 import { motion } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
 import { ProjectCard } from './ProjectCard';
-import imgImage1 from '../assets/417b38615138b7ded6d978f6786eb7c5158da4eb.png';
-import imgImage3 from '../assets/64ca36b5e0d3e7dd75d8d630aa8f238b1024c6bb.png';
-import imgImage4 from '../assets/1af2df29fb6761d26130cecc294ecbe96970bd25.png';
+import imgImage1 from '../assets/arbitel.png';
+import imgImage3 from '../assets/mathemix.png';
+import imgImage4 from '../assets/mangkanor.png';
 
 const projects = [
   {
@@ -23,33 +22,35 @@ const projects = [
   {
     title: 'MangKanor InvMan',
     description:
-      'Arbitel | Hotel Management & Reservation System Arbitel is a comprehensive web-based platform engineered to streamline the hotel booking lifecycle. It facilitates real-time room reservations, secure guest management, and dynamic inventory control. This system provides a scalable solution designed to optimize modern hospitality operations.',
+      'Inventory System for Mang Kanor`s Lechon Manok is a specialized system designed to manage stock levels, track sales, and optimize supply chain operations for a poultry business.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
     image: imgImage4,
   },
 ];
 
 export function ProjectsSection() {
-  const { ref, inView } = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
   return (
-    <section id="projects" className="py-24 px-8" ref={ref}>
+    <section id="projects" className="pt-24 pb-52 px-8">
       <div className="max-w-6xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="text-[40px] text-center mb-16"
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 1.0 }}
+          className="text-center mb-12"
         >
-          PROJECTS
-        </motion.h2>
+          <h2 className="text-[70px] font-['Open_Sans',sans-serif] font-medium tracking-[0.5rem] text-white mb-6 uppercase">
+            PROJECTS
+          </h2>
+          <p className="text-[16px] md:text-[18px] text-[#9ca3af] max-w-2xl mx-auto leading-relaxed">
+            A showcase of my recent work, featuring innovative solutions and creative
+            implementations across various technologies.
+          </p>
+        </motion.div>
 
-        <div className="space-y-8">
+        <div className="space-y-[100px]">
           {projects.map((project, index) => (
-            <ProjectCard key={project.title} project={project} index={index} inView={inView} />
+            <ProjectCard key={project.title} project={project} index={index} />
           ))}
         </div>
       </div>

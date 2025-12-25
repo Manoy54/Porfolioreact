@@ -1,42 +1,87 @@
+import { Mail, MapPin, Linkedin, Github } from 'lucide-react';
 import { motion } from 'motion/react';
-import { useInView } from 'react-intersection-observer';
 
 export function ContactSection() {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
+    return (
+        <section id="footer" className="bg-[#202020] text-white py-20 px-8 border-t border-white/10">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20">
 
-  return (
-    <section id="contact" className="py-32 px-8 min-h-screen flex items-center justify-center" ref={ref}>
-      <div className="max-w-3xl mx-auto text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
-          <h2 className="text-[64px] leading-tight">
-            Got a vision? Let's
-            <br />
-            bring it to life!
-          </h2>
+                    {/* Left Column */}
+                    <div className="space-y-12 max-w-lg">
+                        <div className="space-y-6">
+                            <h2 className="text-4xl md:text-5xl font-['Clash_Grotesk',sans-serif] font-semibold">
+                                Let's Connect
+                            </h2>
+                            <p className="text-gray-400 text-lg leading-relaxed font-['General_Sans',sans-serif]">
+                                Ready to bring your ideas to life? I'd love to hear about your next project and explore how we can work together.
+                            </p>
+                        </div>
 
-          <p className="text-[20px] leading-relaxed max-w-[684px] mx-auto">
-            I'm always excited to collaborate on new and innovative projects. Whether you're
-            starting from scratch or refining an existing idea.
-          </p>
+                        <div className="space-y-8">
+                            {/* Email Item */}
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-[#333] rounded-lg">
+                                    <Mail className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm text-gray-400 font-medium mb-1 tracking-wide">EMAIL</h4>
+                                    <a href="mailto:numanjaved2001@gmail.com" className="text-lg font-medium hover:text-blue-400 transition-colors">
+                                        armentaitsean7@gmail.com
+                                    </a>
+                                </div>
+                            </div>
 
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-[64px] pt-8"
-          >
-            LET GET IN CONTACT
-          </motion.h3>
-        </motion.div>
-      </div>
-    </section>
-  );
+                            {/* Location Item */}
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-[#333] rounded-lg">
+                                    <MapPin className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm text-gray-400 font-medium mb-1 tracking-wide">LOCATION</h4>
+                                    <p className="text-lg font-medium">
+                                        Albay, Philippines
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column */}
+                    <div className="space-y-8 lg:text-right w-full lg:w-auto mt-8 lg:mt-0">
+                        <div className="space-y-4">
+                            <span className="text-sm text-gray-400 tracking-widest uppercase">Drop me a line</span>
+                            <a
+                                href="mailto:numanjaved2001@gmail.com"
+                                className="block text-2xl md:text-3xl lg:text-4xl font-['Clash_Grotesk',sans-serif] font-medium hover:text-blue-400 transition-colors break-all"
+                            >
+                                armentaitsean7@Gma@gmail.com
+                            </a>
+                        </div>
+
+                        <div className="flex flex-col lg:items-end gap-6">
+                            <div className="flex items-center gap-4">
+                                <a href="#" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
+                                    <Linkedin className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
+                                </a>
+                                <a href="#" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
+                                    <Github className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
+                                </a>
+                            </div>
+
+                            <a href="#" className="inline-flex items-center gap-2 text-lg font-medium hover:text-blue-400 transition-colors group">
+
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer Bottom */}
+                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-['General_Sans',sans-serif]">
+
+                </div>
+            </div>
+        </section>
+    );
 }
