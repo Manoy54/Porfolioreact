@@ -122,7 +122,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
 
   // Container styling - Remove bg/border when showing icon
   const isIcon = view === 'icon';
-  const containerClasses = `relative rounded-md flex items-center justify-center h-[54px] transition-all duration-200 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
+  const containerClasses = `relative rounded-md flex items-center justify-center py-[5px] px-[8px] transition-all duration-200 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
     }`;
 
   return (
@@ -133,14 +133,14 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
     >
       <div className={containerClasses}>
         {/* Invisible Spacer using Text to maintain Width */}
-        <span className="opacity-0 px-6 text-[16px] tracking-wide font-medium">
+        <span className="opacity-0 text-[16px] tracking-wide font-normal font-['General_Sans',sans-serif]">
           {skill.name}
         </span>
 
         {/* Visible Content Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center px-6">
+        <div className="absolute inset-0 flex items-center justify-center">
           {view === 'text' && (
-            <span className="text-[16px] tracking-wide font-medium text-white whitespace-nowrap">
+            <span className="text-[16px] tracking-wide font-normal text-white whitespace-nowrap font-['General_Sans',sans-serif]">
               {skill.name}
             </span>
           )}

@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function ContactSection() {
     return (
-        <section id="footer" className="bg-[#202020] text-white py-20 px-8 border-t border-white/10">
+        <section id="footer" className="bg-[#202020] text-white pt-20 pb-8 px-8 border-t border-white/10">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20">
 
@@ -14,7 +14,7 @@ export function ContactSection() {
                                 Let's Connect
                             </h2>
                             <p className="text-gray-400 text-lg leading-relaxed font-['General_Sans',sans-serif]">
-                                Ready to bring your ideas to life? I'd love to hear about your next project and explore how we can work together.
+                                Building from the ground up. Exploring what's possible with code, one project at a time
                             </p>
                         </div>
 
@@ -55,7 +55,7 @@ export function ContactSection() {
                                 href="mailto:numanjaved2001@gmail.com"
                                 className="block text-2xl md:text-3xl lg:text-4xl font-['Clash_Grotesk',sans-serif] font-medium hover:text-blue-400 transition-colors break-all"
                             >
-                                armentaitsean7@Gma@gmail.com
+                                armentaitsean7@gmail.com
                             </a>
                         </div>
 
@@ -78,7 +78,7 @@ export function ContactSection() {
                 </div>
 
                 {/* Footer Bottom */}
-                <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-['General_Sans',sans-serif]">
+                <div className="border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-['General_Sans',sans-serif]">
 
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
-import { FiLink } from 'react-icons/fi';
+
 
 interface Project {
   title: string;
@@ -30,7 +30,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   // Theme Config [Light : Dark]
   const bgClass = isEven ? 'bg-[#F9FAFB]' : 'bg-[#18181b] border border-white/10';
   const titleColor = isEven ? 'text-[#111827]' : 'text-white';
-  const descColor = isEven ? 'text-[#374151]' : 'text-[#A1A1AA]';
+  const descColor = isEven ? 'text-black' : 'text-white';
   const pillClass = isEven
     ? 'bg-white border border-gray-200 text-gray-800'
     : 'bg-white text-black border border-transparent';
@@ -68,7 +68,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
 
         {/* Right Side: content */}
-        <div className="flex flex-col justify-center gap-6">
+        <div className="flex flex-col justify-center gap-5">
 
           {/* Title Area */}
           <div>
@@ -78,8 +78,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           {/* Tech Stack */}
-          <div className="space-y-3">
-            <span className={`text-[13px] font-bold tracking-widest uppercase opacity-60 ${descColor}`}>
+          <div className="flex flex-col gap-4">
+            <span className={`block text-[13px] font-bold tracking-widest uppercase opacity-60 ${descColor}`}>
               Tech Stack
             </span>
             <div className="flex flex-wrap gap-2">
@@ -95,19 +95,26 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
 
           {/* Description */}
-          <p className={`text-[16px] md:text-[18px] leading-relaxed ${descColor}`}>
+          <p className={`text-[14px] md:text-[16px] leading-relaxed font-['General_Sans',sans-serif] ${descColor}`}>
             {project.description}
           </p>
 
           {/* Actions */}
-          <div className="flex flex-wrap gap-4 pt-4 border-t border-white/10 mt-2">
-            <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#202022] hover:bg-[#2a2a2c] text-white transition-all group">
-              <FiLink className="text-lg group-hover:scale-110 transition-transform" />
-              <span className="font-medium">View Code</span>
+          <div className="flex flex-wrap gap-4 pt-3 border-t border-white/10 mt-0">
+            <button className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#dee2e6] hover:bg-[#c1c5c9] text-black transition-all group">
+              <span className="font-mono text-base flex items-center">
+                <span className="group-hover:-translate-x-1 transition-transform duration-300">&lt;</span>
+                <span>/</span>
+                <span className="group-hover:translate-x-1 transition-transform duration-300">&gt;</span>
+              </span>
+              <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">View Code</span>
             </button>
-            <button className="flex items-center gap-2 px-6 py-3 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group">
-              <FiLink className="text-lg group-hover:scale-110 transition-transform" />
-              <span className="font-medium">Live Demo</span>
+            <button className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
+                <line x1="5" y1="19" x2="19" y2="5" />
+                <polyline points="11 5 19 5 19 13" />
+              </svg>
+              <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">Live Demo</span>
             </button>
           </div>
 

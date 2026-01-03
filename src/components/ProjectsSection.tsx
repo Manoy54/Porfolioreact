@@ -20,7 +20,7 @@ const projects = [
     image: imgImage3,
   },
   {
-    title: 'MangKanor InvMan',
+    title: 'MangKanor Inventory',
     description:
       'Inventory System for Mang Kanor`s Lechon Manok is a specialized system designed to manage stock levels, track sales, and optimize supply chain operations for a poultry business.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
@@ -39,12 +39,11 @@ export function ProjectsSection() {
           transition={{ duration: 1.0 }}
           className="text-center mb-12"
         >
-          <h2 className="text-[70px] font-['Open_Sans',sans-serif] font-medium tracking-[0.5rem] text-white mb-6 uppercase">
+          <h2 className="text-[80px] md:text-[100px] font-['Open_Sans',sans-serif] font-medium tracking-[0.5rem] text-white mb-6 uppercase">
             PROJECTS
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#9ca3af] max-w-2xl mx-auto leading-relaxed">
-            A showcase of my recent work, featuring innovative solutions and creative
-            implementations across various technologies.
+          <p className="text-[16px] md:text-[18px] text-[#9ca3af] max-w-2xl mx-auto leading-relaxed font-['General_Sans',sans-serif]">
+            Building from the ground up. Exploring what's possible with code, one project at a time
           </p>
         </motion.div>
 

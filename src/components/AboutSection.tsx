@@ -27,19 +27,8 @@ export function AboutSection() {
             transition={{ duration: 1.0, delay: 0.2 }}
             className="space-y-8"
           >
-            <p className="text-[16px] md:text-[18px] leading-relaxed text-[#9ca3af]">
-              Hi I'm Aimane, a creative web developer based in Belgium. Currently focusing on
-              frontend development and digital experiences. Passion for development/design fuels my
-              drive to create immersive and visually captivating digital experiences that leave a
-              lasting impression.
-            </p>
-
-            <p className="text-[16px] md:text-[18px] leading-relaxed text-[#9ca3af]">
-              My objective is to maintain a standard of continuous professional improvement. I am
-              particularly interested in the challenge of building robust systems that prioritize
-              user experience and maintainable codebases. I view every project as an opportunity to
-              implement more efficient methodologies and expand my technical horizon within the
-              full-stack ecosystem.
+            <p className="text-[18px] md:text-[20px] leading-relaxed text-[#9ca3af] hover:text-white transition-colors duration-300 font-['General_Sans',sans-serif]">
+              A student based in Tabaco City, Albay, currently working through the ins and outs of Full Stack Development. Work usually involves building responsive interfaces, handling the logic behind the scenes, and organizing data to create smooth web applications. There’s a constant focus on experimenting with different tools and making sure everything runs efficiently. A big believer in teamwork and clear communication, ensuring that every project reaches its full potential.
             </p>
           </motion.div>
 

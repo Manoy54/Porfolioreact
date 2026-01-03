@@ -194,7 +194,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center text-4xl md:text-5xl lg:text-7xl tracking-wide mb-8 text-white font-['Clash_Grotesk',sans-serif] font-medium whitespace-nowrap"
+          className="text-center text-4xl md:text-5xl lg:text-7xl tracking-[0.3rem] mb-8 text-white font-['Clash_Grotesk',sans-serif] font-medium whitespace-nowrap"
         >
           <GlitchText text="SEAN DYLAN ARMENTA" triggerOnMount />
           {/* Custom thinner cursor with hard blink */}
@@ -205,9 +205,9 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
-          className="text-[15px] md:text-[17px] text-white leading-relaxed max-w-[800px] mx-auto font-['General_Sans',sans-serif] font-normal"
+          className="text-[15px] md:text-[20px] text-white leading-relaxed max-w-[700px] mx-auto font-['General_Sans',sans-serif] font-normal"
         >
-          <GlitchText triggerOnMount text="As an aspiring Full-Stack Developer, I am focused on building high-performance, responsive web apps. I bring a fresh grasp of modern architecture and a proactive approach to troubleshooting code. I’m eager to apply these skills to real challenges and create meaningful digital experiences within a collaborative environment." />
+          <GlitchText triggerOnMount text="Aspiring Full-Stack Developer building responsive web apps with modern architecture. I’m a proactive problem-solver eager to contribute to impactful projects in a team environment." />
         </motion.p>
 
         <motion.div
