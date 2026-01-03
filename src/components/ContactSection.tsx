@@ -61,10 +61,10 @@ export function ContactSection() {
 
                         <div className="flex flex-col lg:items-end gap-6">
                             <div className="flex items-center gap-4">
-                                <a href="#" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
+                                <a href="https://www.linkedin.com/in/sean-dylan-armenta-7b98b73a1" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
                                     <Linkedin className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
                                 </a>
-                                <a href="#" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
+                                <a href="https://github.com/Manoy54" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
                                     <Github className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
                                 </a>
                             </div>
