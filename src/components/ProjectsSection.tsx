@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'ARBITEL',
     description:
-      'Arbitel | Hotel Management & Reservation System Arbitel is a comprehensive web-based platform engineered to streamline the hotel booking lifecycle. It facilitates real-time room reservations, secure guest management, and dynamic inventory control. This system provides a scalable solution designed to optimize modern hospitality operations.',
+      'A full-stack hotel management system handling real-time reservations, guest records, and room inventory. Built to help hotel staff manage daily operations more efficiently.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
     image: imgImage1,
     viewCodeUrl: 'https://github.com/Manoy54/ArbitelHotel',
@@ -17,7 +17,7 @@ const projects = [
   {
     title: 'MATHEMIX',
     description:
-      'Mathemix is a high-energy, gamified educational platform designed to make mathematics competitive and engaging. It combines fast-paced solo challenges with real-time multiplayer lobbies where players compete for the top spot on the leaderboard.',
+      'A competitive math game where learning meets speed. Features real-time multiplayer lobbies and solo modes, letting players race against the clock or each other to climb the leaderboards.',
     tech: ['REACT', 'TAILWIND', 'NOSQL', 'MOTION', 'FIREBASE'],
     image: imgImage3,
     viewCodeUrl: 'https://github.com/Manoy54/MatheMix-repository',
@@ -26,7 +26,7 @@ const projects = [
   {
     title: 'MangKanor Inventory',
     description:
-      'Inventory System for Mang Kanor`s Lechon Manok is a specialized system designed to manage stock levels, track sales, and optimize supply chain operations for a poultry business.',
+      'A custom inventory tracker for a local Lechon Manok business. It tracks stock in real-time and records daily sales, replacing manual logging with a digital dashboard.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
     image: imgImage4,
   },
