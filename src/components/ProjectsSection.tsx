@@ -11,6 +11,8 @@ const projects = [
       'Arbitel | Hotel Management & Reservation System Arbitel is a comprehensive web-based platform engineered to streamline the hotel booking lifecycle. It facilitates real-time room reservations, secure guest management, and dynamic inventory control. This system provides a scalable solution designed to optimize modern hospitality operations.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
     image: imgImage1,
+    viewCodeUrl: 'https://github.com/Manoy54/ArbitelHotel',
+    liveDemoUrl: 'https://arbitel-hotel.vercel.app/',
   },
   {
     title: 'MATHEMIX',
@@ -18,6 +20,8 @@ const projects = [
       'Mathemix is a high-energy, gamified educational platform designed to make mathematics competitive and engaging. It combines fast-paced solo challenges with real-time multiplayer lobbies where players compete for the top spot on the leaderboard.',
     tech: ['REACT', 'TAILWIND', 'NOSQL', 'MOTION', 'FIREBASE'],
     image: imgImage3,
+    viewCodeUrl: 'https://github.com/Manoy54/MatheMix-repository',
+    liveDemoUrl: 'https://mathemix-9c8ba.web.app/welcome',
   },
   {
     title: 'MangKanor Inventory',

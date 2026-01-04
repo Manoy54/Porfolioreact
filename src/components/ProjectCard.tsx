@@ -7,6 +7,8 @@ interface Project {
   description: string;
   tech: string[];
   image: string;
+  viewCodeUrl?: string;
+  liveDemoUrl?: string;
 }
 
 interface ProjectCardProps {
@@ -101,21 +103,35 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* Actions */}
           <div className="flex flex-wrap gap-4 pt-3 border-t border-white/10 mt-0">
-            <button className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#dee2e6] hover:bg-[#c1c5c9] text-black transition-all group">
-              <span className="font-mono text-base flex items-center">
-                <span className="group-hover:-translate-x-1 transition-transform duration-300">&lt;</span>
-                <span>/</span>
-                <span className="group-hover:translate-x-1 transition-transform duration-300">&gt;</span>
-              </span>
-              <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">View Code</span>
-            </button>
-            <button className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
-                <line x1="5" y1="19" x2="19" y2="5" />
-                <polyline points="11 5 19 5 19 13" />
-              </svg>
-              <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">Live Demo</span>
-            </button>
+            {project.viewCodeUrl && (
+              <a
+                href={project.viewCodeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#dee2e6] hover:bg-[#c1c5c9] text-black transition-all group"
+              >
+                <span className="font-mono text-base flex items-center">
+                  <span className="group-hover:-translate-x-1 transition-transform duration-300">&lt;</span>
+                  <span>/</span>
+                  <span className="group-hover:translate-x-1 transition-transform duration-300">&gt;</span>
+                </span>
+                <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">View Code</span>
+              </a>
+            )}
+            {project.liveDemoUrl && (
+              <a
+                href={project.liveDemoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-5 py-2 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
+                  <line x1="5" y1="19" x2="19" y2="5" />
+                  <polyline points="11 5 19 5 19 13" />
+                </svg>
+                <span className="font-medium text-[14px] font-['General_Sans',sans-serif]">Live Demo</span>
+              </a>
+            )}
           </div>
 
         </div>
