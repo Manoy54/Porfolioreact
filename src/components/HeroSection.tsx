@@ -217,8 +217,9 @@ export function HeroSection() {
           className="mt-10"
         >
           <a
-            href="/resume.pdf"
-            download="Sean_Dylan_Armenta_Resume.pdf"
+            href="/CV%20-%20Sean%20Dylan%20Armenta.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group/resume pointer-events-auto inline-block px-4 py-2 font-['JetBrains_Mono',monospace] text-[16px] md:text-[18px] text-[#a1a1aa] hover:text-white hover:scale-[1.02] transition-all duration-300"
           >
             &lt;ViewResume <span className="group-hover/resume:hidden">/&gt;</span><span className="hidden group-hover/resume:inline">-&gt;</span>
