@@ -77,7 +77,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
     // Alphanumeric + Symbols + Underscore (from GlitchText)
     const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890_____________!@#$^&*-=+";
     let frame = 0;
-    const maxFrames = 4; // Very fast transition
+    const maxFrames = 2; // Very fast transition
 
     const animate = () => {
       if (frame >= maxFrames) {
@@ -95,7 +95,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
 
       frame++;
       frameTimerRef.current = requestAnimationFrame(() => {
-        setTimeout(animate, 30); // 30ms per frame
+        setTimeout(animate, 10); // 10ms per frame
       });
     };
 
@@ -120,7 +120,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
 
   // Container styling - Remove bg/border when showing icon
   const isIcon = view === 'icon';
-  const containerClasses = `relative rounded-md flex items-center justify-center py-[5px] px-[8px] transition-all duration-200 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
+  const containerClasses = `relative rounded-md flex items-center justify-center py-[5px] px-[8px] transition-all duration-100 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
     }`;
 
   return (
@@ -150,7 +150,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
           )}
 
           {view === 'icon' && (
-            <div className="flex items-center justify-center animate-in fade-in zoom-in duration-200">
+            <div className="flex items-center justify-center animate-in fade-in zoom-in duration-100">
               {skill.name === 'C' ? (
                 <div
                   className="flex items-center justify-center w-8 h-8 rounded-full"
