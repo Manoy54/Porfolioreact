@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Github } from 'lucide-react';
+import { Mail, MapPin, Linkedin, Github, Facebook, Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function ContactSection() {
@@ -26,7 +26,7 @@ export function ContactSection() {
                                 </div>
                                 <div>
                                     <h4 className="text-sm text-gray-400 font-medium mb-1 tracking-wide">EMAIL</h4>
-                                    <a href="mailto:numanjaved2001@gmail.com" className="text-lg font-medium hover:text-blue-400 transition-colors">
+                                    <a href="mailto:armentaitsean7@gmail.com" className="text-lg font-medium hover:text-blue-400 transition-colors">
                                         armentaitsean7@gmail.com
                                     </a>
                                 </div>
@@ -44,19 +44,31 @@ export function ContactSection() {
                                     </p>
                                 </div>
                             </div>
+
+                            {/* Phone Item */}
+                            <div className="flex items-start gap-4">
+                                <div className="p-3 bg-[#333] rounded-lg">
+                                    <Phone className="w-6 h-6 text-white" />
+                                </div>
+                                <div>
+                                    <h4 className="text-sm text-gray-400 font-medium mb-1 tracking-wide">PHONE</h4>
+                                    <p className="text-lg font-medium">
+                                        +63 9206905880
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
                     {/* Right Column */}
                     <div className="space-y-8 lg:text-right w-full lg:w-auto mt-8 lg:mt-0">
                         <div className="space-y-4">
-                            <span className="text-sm text-gray-400 tracking-widest uppercase">Drop me a line</span>
-                            <a
-                                href="mailto:numanjaved2001@gmail.com"
-                                className="block text-2xl md:text-3xl lg:text-4xl font-['Clash_Grotesk',sans-serif] font-medium hover:text-blue-400 transition-colors break-all"
+
+                            <span
+                                className="block text-2xl md:text-3xl lg:text-4xl font-['Clash_Grotesk',sans-serif] font-medium text-white/90 break-all"
                             >
-                                armentaitsean7@gmail.com
-                            </a>
+                                Sean Armenta
+                            </span>
                         </div>
 
                         <div className="flex flex-col lg:items-end gap-6">
@@ -67,6 +79,9 @@ export function ContactSection() {
                                 <a href="https://github.com/Manoy54" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
                                     <Github className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
                                 </a>
+                                <a href="https://www.facebook.com/itSean.DylanArmenta" target="_blank" rel="noopener noreferrer" className="p-3 bg-[#333] rounded-lg hover:bg-[#444] transition-colors group">
+                                    <Facebook className="w-6 h-6 text-white group-hover:text-blue-400 transition-colors" />
+                                </a>
                             </div>
 
 
@@ -74,11 +89,12 @@ export function ContactSection() {
                     </div>
                 </div>
 
+
                 {/* Footer Bottom */}
                 <div className="border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-500 font-['General_Sans',sans-serif]">
 
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
