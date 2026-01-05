@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import {
   SiHtml5, SiCss3, SiJavascript, SiC, SiCplusplus,
   SiTailwindcss, SiBootstrap, SiReact, SiFigma, SiFramer,
-  SiNodedotjs, SiPhp, SiMysql, SiGit
+  SiPhp, SiMysql
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
@@ -18,10 +18,8 @@ const skills = [
   { name: 'REACT', icon: SiReact, color: '#61DAFB' },
   { name: 'FIGMA', icon: SiFigma, color: '#F24E1E' },
   { name: 'MOTION', icon: SiFramer, color: '#0055FF' }, // Assuming Framer Motion
-  { name: 'NODE JS', icon: SiNodedotjs, color: '#339933' },
   { name: 'PHP', icon: SiPhp, color: '#777BB4' },
   { name: 'MYSQL', icon: SiMysql, color: '#4479A1' },
-  { name: 'GIT', icon: SiGit, color: '#F05032' },
 ];
 
 export function SkillsSection() {

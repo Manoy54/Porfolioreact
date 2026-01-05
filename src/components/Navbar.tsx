@@ -50,7 +50,7 @@ export function Navbar({ scrolled }: NavbarProps) {
             onClick={() => scrollToSection('skills')}
             className="hover:text-gray-300 transition-colors"
           >
-            <GlitchText text="EXPERIENCE" />
+            <GlitchText text="SKILLS" />
           </button>
           <button
             onClick={() => scrollToSection('contact')}
@@ -60,6 +60,6 @@ export function Navbar({ scrolled }: NavbarProps) {
           </button>
         </div>
       </div>
-    </motion.nav>
+    </motion.nav >
   );
 }

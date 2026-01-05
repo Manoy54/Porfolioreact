@@ -3,6 +3,7 @@ import { ProjectCard } from './ProjectCard';
 import imgImage1 from '../assets/arbitel.png';
 import imgImage3 from '../assets/mathemix.png';
 import imgImage4 from '../assets/mangkanor.png';
+import imgStudentGrade from '../assets/student&grade.png';
 
 const projects = [
   {
@@ -17,7 +18,7 @@ const projects = [
   {
     title: 'MATHEMIX',
     description:
-      'A competitive math game where learning meets speed. Features real-time multiplayer lobbies and solo modes, letting players race against the clock or each other to climb the leaderboards.',
+      'Competitive math game where learning meets speed. Features real-time multiplayer lobbies and solo modes, letting players race against the clock or each other to climb the leaderboards.',
     tech: ['REACT', 'TAILWIND', 'NOSQL', 'MOTION', 'FIREBASE'],
     image: imgImage3,
     viewCodeUrl: 'https://github.com/Manoy54/MatheMix-repository',
@@ -29,6 +30,13 @@ const projects = [
       'A custom inventory tracker for a local Lechon Manok business. It tracks stock in real-time and records daily sales, replacing manual logging with a digital dashboard.',
     tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
     image: imgImage4,
+  },
+  {
+    title: 'STUDENT GRADING SYSTEM',
+    description:
+      'Console-based academic management system for educational institutions. Manages student records, grades, attendance, and assignments through a text-based interface, storing all data in local text files for simple and reliable data persistence.',
+    tech: ['C'],
+    image: imgStudentGrade,
   },
 ];
 
