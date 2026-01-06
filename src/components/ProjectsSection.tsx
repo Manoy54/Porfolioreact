@@ -42,7 +42,7 @@ const projects = [
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="pt-24 pb-52 px-8">
+    <section id="projects" className="pt-10 pb-20 md:pt-24 md:pb-52 px-6 md:px-8">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -51,15 +51,15 @@ export function ProjectsSection() {
           transition={{ duration: 1.0 }}
           className="text-center mb-12"
         >
-          <h2 className="text-[80px] md:text-[100px] font-['Open_Sans',sans-serif] font-medium tracking-[0.5rem] text-white mb-6 uppercase">
+          <h2 className="text-5xl md:text-[100px] font-['Open_Sans',sans-serif] font-medium tracking-widest md:tracking-[0.5rem] text-white mb-6 uppercase">
             PROJECTS
           </h2>
-          <p className="text-[16px] md:text-[18px] text-[#9ca3af] max-w-2xl mx-auto leading-relaxed font-['General_Sans',sans-serif]">
+          <p className="text-base md:text-lg text-[#9ca3af] max-w-2xl mx-auto leading-relaxed font-['General_Sans',sans-serif]">
             Building from the ground up. Exploring what's possible with code, one project at a time
           </p>
         </motion.div>
 
-        <div className="space-y-[100px]">
+        <div className="space-y-16 md:space-y-[100px]">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

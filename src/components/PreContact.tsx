@@ -388,7 +388,7 @@ export function PreContact() {
     <section
       id="contact"
       ref={containerRef}
-      className="relative py-32 px-8 min-h-screen flex items-center justify-center bg-[#202020] overflow-hidden group"
+      className="relative py-16 md:py-32 px-8 min-h-[50vh] md:min-h-screen flex items-center justify-center bg-[#202020] overflow-hidden group"
     >
       {/* Blueprint Reveal Layer */}
       <div
@@ -411,11 +411,11 @@ export function PreContact() {
           transition={{ duration: 1.0 }}
           className="space-y-8"
         >
-          <h2 className="text-[96px] leading-tight font-['Clash_Grotesk',sans-serif] font-medium text-white tracking-widest whitespace-nowrap">
+          <h2 className="text-4xl md:text-[96px] leading-tight font-['Clash_Grotesk',sans-serif] font-medium text-white tracking-widest whitespace-normal lg:whitespace-nowrap">
             READY TO BUILD?
           </h2>
 
-          <p className="text-[20px] leading-relaxed max-w-[684px] mx-auto font-['General_Sans',sans-serif] font-normal text-white pointer-events-auto">
+          <p className="text-base md:text-[20px] leading-relaxed max-w-[684px] mx-auto font-['General_Sans',sans-serif] font-normal text-white pointer-events-auto">
             Open to internships and collaborations. From scalable backends to responsive frontends, I deliver clean code that gets the job done. Let’s build together.
           </p>
         </motion.div>

@@ -33,34 +33,30 @@ export const EDUCATION = {
 
 export const SKILLS = {
   languages: [
-    "JavaScript", "TypeScript", 
+    "JavaScript", "C", "C++", "JAVA",
     "Python", "SQL", "HTML", "CSS"
   ],
   frameworks: [
-    "React", "Next.js", 
+    "React", 
     "Node.js", "TailwindCSS"
   ],
   tools: [
     "Git", "VS Code", 
-    "Figma", "Postman", "Docker"
+    "Figma", 
   ],
   databases: [
-    "PostgreSQL", "MongoDB", "MySQL"
+    "PostgreSQL", "Firebase", "MySQL"
   ]
 };
 
 export const EXPERIENCE = [
   {
-    role: "Frontend Developer",
-    company: "Tech Solutions Inc.",
-    year: "2023 - Present",
-    details: "Building responsive web apps."
+    role: "Full Stack Developer",
+    work: "Mathemix",
+    year: "2025",
+    details: "Building functional Math Game"
   },
-  {
-    role: "Freelance",
-    year: "2021 - 2023",
-    details: "Delivered custom websites."
-  }
+ 
 ];
 
 export const HOBBIES = [
@@ -155,7 +151,7 @@ export function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 bg-[#202020] group"
+      className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden pt-20 md:pt-24 bg-[#202020] group"
     >
       {/* Code Background Layer */}
       <div
@@ -194,7 +190,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center text-4xl md:text-5xl lg:text-7xl tracking-[0.3rem] mb-8 text-white font-['Clash_Grotesk',sans-serif] font-medium whitespace-nowrap"
+          className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-7xl tracking-widest md:tracking-[0.3rem] mb-8 text-white font-['Clash_Grotesk',sans-serif] font-medium whitespace-normal md:whitespace-nowrap"
         >
           <GlitchText text="SEAN DYLAN ARMENTA" triggerOnMount />
           {/* Custom thinner cursor with hard blink */}

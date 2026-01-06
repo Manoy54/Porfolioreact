@@ -24,7 +24,7 @@ const skills = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="py-24 px-[4.5rem]">
+    <section id="skills" className="py-10 md:py-24 px-6 md:px-[4.5rem]">
       <div className="w-full flex flex-col md:flex-row gap-8 md:gap-16">
         {/* Left Column - Label */}
         <div className="w-full md:w-1/4">
@@ -120,8 +120,10 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
 
   // Container styling - Remove bg/border when showing icon
   const isIcon = view === 'icon';
-  const containerClasses = `relative rounded-md flex items-center justify-center py-[5px] px-[8px] transition-all duration-100 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
+  const containerClasses = `relative rounded-md flex items-center justify-center py-2 px-4 transition-all duration-100 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
     }`;
+
+  const textClasses = "text-sm sm:text-base tracking-wide font-normal font-['General_Sans',sans-serif] whitespace-nowrap";
 
   return (
     <div
@@ -131,20 +133,20 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
     >
       <div className={containerClasses}>
         {/* Invisible Spacer using Text to maintain Width */}
-        <span className="opacity-0 text-[16px] tracking-wide font-normal font-['General_Sans',sans-serif]">
+        <span className={`opacity-0 ${textClasses}`}>
           {skill.name}
         </span>
 
         {/* Visible Content Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center text-center">
           {view === 'text' && (
-            <span className="text-[16px] tracking-wide font-normal text-white whitespace-nowrap font-['General_Sans',sans-serif]">
+            <span className={`text-white ${textClasses}`}>
               {skill.name}
             </span>
           )}
 
           {view === 'glitch' && (
-            <span className="text-[16px] tracking-wide font-medium text-white/90 whitespace-nowrap font-mono">
+            <span className={`text-white/90 font-mono ${textClasses}`}>
               {glitchText}
             </span>
           )}
@@ -159,7 +161,7 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
                   <skill.icon className="text-[18px] text-white" />
                 </div>
               ) : (
-                <skill.icon className="text-[32px]" style={{ color: skill.color }} />
+                <skill.icon className="text-[28px] sm:text-[32px]" style={{ color: skill.color }} />
               )}
             </div>
           )}

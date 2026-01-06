@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 
 export function ContactSection() {
     return (
-        <section id="contact" className="bg-[#202020] text-white pt-20 pb-8 px-8 border-t border-white/10">
+        <section id="contact" className="bg-[#202020] text-white pt-10 md:pt-20 pb-8 px-6 md:px-8 border-t border-white/10">
             <div className="max-w-7xl mx-auto">
                 <div className="flex flex-col lg:flex-row justify-between items-start gap-16 mb-20">
 
