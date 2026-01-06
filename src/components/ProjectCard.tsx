@@ -97,13 +97,13 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             {project.description}
           </p>
 
-          <div className="flex flex-row gap-3 w-full pt-3 border-t border-white/10 mt-0">
+          <div className="flex flex-row gap-3 w-full md:w-auto pt-3 border-t border-white/10 mt-0">
             {project.viewCodeUrl && (
               <a
                 href={project.viewCodeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-lg bg-[#dee2e6] hover:bg-[#c1c5c9] text-black transition-all group"
+                className="flex-1 md:flex-none flex items-center justify-center md:justify-start gap-2 px-3 py-2 md:px-5 md:py-2 rounded-lg bg-[#dee2e6] hover:bg-[#c1c5c9] text-black transition-all group"
               >
                 <span className="font-mono text-sm md:text-base flex items-center">
                   <span className="group-hover:-translate-x-1 transition-transform duration-300">&lt;</span>
@@ -118,7 +118,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
                 href={project.liveDemoUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-3 py-2 md:px-5 md:py-2 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group"
+                className="flex-1 md:flex-none flex items-center justify-center md:justify-start gap-2 px-3 py-2 md:px-5 md:py-2 rounded-lg bg-[#0F1021] hover:bg-[#1a1b35] text-white transition-all group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4 md:w-5 md:h-5 text-base group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">
                   <line x1="5" y1="19" x2="19" y2="5" />

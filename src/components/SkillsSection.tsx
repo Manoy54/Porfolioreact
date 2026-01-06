@@ -66,12 +66,21 @@ import { useState, useRef, useEffect } from 'react';
 function SkillItem({ skill }: { skill: typeof skills[0] }) {
   const [view, setView] = useState<'text' | 'glitch' | 'icon'>('text');
   const [glitchText, setGlitchText] = useState('');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Timer refs to clear timeouts on unmount/change
   const glitchTimerRef = useRef<NodeJS.Timeout | null>(null);
   const frameTimerRef = useRef<number | null>(null);
 
   const startGlitch = (target: 'text' | 'icon') => {
+    if (isMobile) return;
     setView('glitch');
 
     // Alphanumeric + Symbols + Underscore (from GlitchText)
@@ -104,11 +113,11 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
   };
 
   const handleMouseEnter = () => {
-    startGlitch('icon');
+    if (!isMobile) startGlitch('icon');
   };
 
   const handleMouseLeave = () => {
-    startGlitch('text');
+    if (!isMobile) startGlitch('text');
   };
 
   useEffect(() => {
@@ -118,9 +127,9 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
     };
   }, []);
 
-  // Container styling - Remove bg/border when showing icon
+  // Container styling
   const isIcon = view === 'icon';
-  const containerClasses = `relative rounded-md flex items-center justify-center py-2 px-4 transition-all duration-100 overflow-hidden ${isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white'
+  const containerClasses = `relative rounded-md flex items-center justify-center py-2 px-4 transition-all duration-100 overflow-hidden ${isMobile ? 'bg-[#202020] border border-white' : (isIcon ? 'bg-transparent border border-transparent' : 'bg-[#202020] border border-white')
     }`;
 
   const textClasses = "text-sm sm:text-base tracking-wide font-normal font-['General_Sans',sans-serif] whitespace-nowrap";
@@ -132,40 +141,60 @@ function SkillItem({ skill }: { skill: typeof skills[0] }) {
       onMouseLeave={handleMouseLeave}
     >
       <div className={containerClasses}>
-        {/* Invisible Spacer using Text to maintain Width */}
-        <span className={`opacity-0 ${textClasses}`}>
-          {skill.name}
-        </span>
-
-        {/* Visible Content Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center text-center">
-          {view === 'text' && (
+        {isMobile ? (
+          <div className="flex items-center gap-2">
+            {skill.name === 'C' ? (
+              <div
+                className="flex items-center justify-center w-5 h-5 rounded-full"
+                style={{ backgroundColor: skill.color }}
+              >
+                <skill.icon className="text-[12px] text-white" />
+              </div>
+            ) : (
+              <skill.icon className="text-[20px]" style={{ color: skill.color }} />
+            )}
             <span className={`text-white ${textClasses}`}>
               {skill.name}
             </span>
-          )}
-
-          {view === 'glitch' && (
-            <span className={`text-white/90 font-mono ${textClasses}`}>
-              {glitchText}
+          </div>
+        ) : (
+          <>
+            {/* Invisible Spacer using Text to maintain Width */}
+            <span className={`opacity-0 ${textClasses}`}>
+              {skill.name}
             </span>
-          )}
 
-          {view === 'icon' && (
-            <div className="flex items-center justify-center animate-in fade-in zoom-in duration-100">
-              {skill.name === 'C' ? (
-                <div
-                  className="flex items-center justify-center w-8 h-8 rounded-full"
-                  style={{ backgroundColor: skill.color }}
-                >
-                  <skill.icon className="text-[18px] text-white" />
+            {/* Visible Content Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center text-center">
+              {view === 'text' && (
+                <span className={`text-white ${textClasses}`}>
+                  {skill.name}
+                </span>
+              )}
+
+              {view === 'glitch' && (
+                <span className={`text-white/90 font-mono ${textClasses}`}>
+                  {glitchText}
+                </span>
+              )}
+
+              {view === 'icon' && (
+                <div className="flex items-center justify-center animate-in fade-in zoom-in duration-100">
+                  {skill.name === 'C' ? (
+                    <div
+                      className="flex items-center justify-center w-8 h-8 rounded-full"
+                      style={{ backgroundColor: skill.color }}
+                    >
+                      <skill.icon className="text-[18px] text-white" />
+                    </div>
+                  ) : (
+                    <skill.icon className="text-[28px] sm:text-[32px]" style={{ color: skill.color }} />
+                  )}
                 </div>
-              ) : (
-                <skill.icon className="text-[28px] sm:text-[32px]" style={{ color: skill.color }} />
               )}
             </div>
-          )}
-        </div>
+          </>
+        )}
       </div>
     </div>
   );
