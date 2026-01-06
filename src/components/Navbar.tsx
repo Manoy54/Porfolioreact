@@ -33,7 +33,7 @@ export function Navbar({ scrolled }: NavbarProps) {
     >
       <div className="h-full w-full max-w-[1920px] mx-auto flex items-center justify-between relative">
         {/* Left: Name */}
-        <div className="text-white font-bold text-[17px] tracking-[-0.02em] font-['Inter'] cursor-pointer z-50 mix-blend-difference">
+        <div className="text-white font-bold text-[14px] md:text-[17px] tracking-[-0.02em] font-['Inter'] cursor-pointer z-50 mix-blend-difference">
           <GlitchText text="Sean Armenta" />
         </div>
 
