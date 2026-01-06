@@ -37,8 +37,8 @@ export function Navbar({ scrolled }: NavbarProps) {
           <GlitchText text="Sean Armenta" />
         </div>
 
-        {/* Center: Star - Hidden on Mobile to prevent overlap */}
-        <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white items-center justify-center">
+        {/* Center: Star */}
+        <div className="flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white items-center justify-center">
           <span className="text-[22px]">✦</span>
         </div>
 
