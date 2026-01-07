@@ -28,7 +28,7 @@ const projects = [
     title: 'MangKanor Inventory',
     description:
       'A custom inventory tracker for a local Lechon Manok business. It tracks stock in real-time and records daily sales, replacing manual logging with a digital dashboard.',
-    tech: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'MYSQL'],
+    tech: ['JAVA', 'JAVA SWING'],
     image: imgImage4,
   },
   {
