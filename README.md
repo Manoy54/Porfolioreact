@@ -1,11 +1,5 @@
+Portfolio
 
-  # Analyze Design and Take Notes
+Project Description: A personal professional showcase designed to highlight my technical skills and project history through an interactive web experience. It leverages advanced animation libraries to create a high-performance, polished user interface with smooth transitions.
 
-  This is a code bundle for Analyze Design and Take Notes. The original project is available at https://www.figma.com/design/8NVvoYmZEbuUmtj6lEVdAI/Analyze-Design-and-Take-Notes.
-
-  ## Running the code
-
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+Tech Stack: React, Framer Motion, Vercel
